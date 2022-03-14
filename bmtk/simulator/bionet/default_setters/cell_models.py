@@ -149,6 +149,7 @@ def set_params_peri(hobj, biophys_params):
 
         for sec in sections:
             if p["mechanism"] != "":
+                print(p["mechanism"])
                 sec.insert(p["mechanism"])
             setattr(sec, p["name"], p["value"])
 

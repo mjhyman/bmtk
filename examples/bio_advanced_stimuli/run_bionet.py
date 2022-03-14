@@ -18,10 +18,13 @@ def run(config_file):
 
 if __name__ == '__main__':
     if __file__ != sys.argv[-1]:
-        run(sys.argv[-1])
+        # run(sys.argv[-1])
+        print('running if statment (xstim config)')
+        run('config.simulation_xstim.json')  # Extracellular electrode stimulation
     else:
+        print('running else statement')
         # Make sure to run only one at a time
-        run('config.simulation_iclamp.json')  # Current clamp stimulation
-        # run('config.simulation_xstim.json')  # Extracellular electrode stimulation
+        # run('config.simulation_iclamp.json')  # Current clamp stimulation
+        run('config.simulation_xstim.json')  # Extracellular electrode stimulation
         # run('config.simulation_spikes.json')  # Synaptic stimulation with external virtual cells
         # run('config.simulation_spont_activity.json')  # Spontaneous synaptic activity
