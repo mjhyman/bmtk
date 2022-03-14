@@ -12,4 +12,7 @@ net.add_nodes(cell_name='Scnn1a_473845048',
               morphology='Scnn1a_473845048_m.swc')
 
 net.build()
-net.save_nodes(output_dir='network')
+net.save_nodes(output_dir='../../../../sim_ch01/network')
+
+for node in net.nodes():
+    print(node)
